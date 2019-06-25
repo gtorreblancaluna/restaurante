@@ -80,6 +80,8 @@ import ve.edu.ucab.logic.LogicComponent;
 import ve.edu.ucab.logic.LogicListComponent;
 
 public class principal extends javax.swing.JFrame {
+    
+    // git commit all
 
     static sqlclass funcion = new sqlclass();
     sqlclass general = new sqlclass();
