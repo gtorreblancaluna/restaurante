@@ -1,26 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package restaurante;
 
 import clases.conectate;
 import clases.sqlclass;
 import java.awt.GridLayout;
-import java.awt.HeadlessException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import static restaurante.iniciar_sesion.administrador_global;
-import static restaurante.iniciar_sesion.apellidos_usuario_global;
-import static restaurante.iniciar_sesion.id_usuario_global;
-import static restaurante.iniciar_sesion.nombre_usuario_global;
-import static restaurante.iniciar_sesion.puesto_global;
 import ve.edu.ucab.keyboard.Keyboard;
 import ve.edu.ucab.logic.LogicComponent;
 import ve.edu.ucab.logic.LogicListComponent;
@@ -34,28 +18,17 @@ public class validar_empleado extends javax.swing.JDialog {
     public static String num_comensales_global, nombre_cliente_global, id_clientes, id_empleado, cargo_trabajador, nombre_trabajador;
     boolean selecciono_clientes = false, like_nombre = false;
     conectate conexion = new conectate();
-//    principal aux = new principal();
     private Keyboard keyboard;
     sqlclass funcion = new sqlclass();
     Object[][] dtconduc;
 
-    /**
-     * Creates new form input_orden
-     */
     public validar_empleado(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        funcion.conectate();
-        this.lbl_nombre_empleado.setText("Ingresa tu contraseña "+funcion.GetData("nombre_empleado", "SELECT CONCAT(e.`nombre`,\" \", e.`apellidos`)AS nombre_empleado FROM empleado e, venta v WHERE v.id_empleado=e.id_empleado AND v.id_venta=(SELECT id_venta FROM venta WHERE id_venta = "+ principal.id_venta_global +")"));
-//        funcion.desconecta();
         this.setLocationRelativeTo(null);
-
         LogicListComponent components = new LogicListComponent();
-
         components.addComponent(new LogicComponent(this.txt_num_trabajador, 1, true, false, false, true));
-
         keyboard = new Keyboard(components, true);
-        //keyboard.
         panel_teclado.setLayout(new GridLayout(1, 1));
         panel_teclado.add(keyboard);
     }

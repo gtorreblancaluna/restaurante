@@ -1352,15 +1352,6 @@ public class principal extends javax.swing.JFrame {
                         addMainMenue();
                         validar = false; // validacion para ver si la venta existe
 
-                        /*int filas = tabla_venta.getRowCount();
-                         for (int i = 0; i < filas; i++) {
-                         int cantidad = Integer.parseInt(tabla_venta.getValueAt(i, 1).toString());
-                         int importe; //= Integer.parseInt(tabla_venta.getValueAt(i, 4).toString());
-                         int precio = Integer.parseInt(tabla_venta.getValueAt(i, 3).toString());
-                         importe = precio * cantidad;
-                         //tabla_venta.setValueAt(cantidad,i, 1);
-                         tabla_venta.setValueAt(importe, i, 4);
-                         }*/
                         panel_totales.setVisible(true);
                         total_pagar();
                         total();
@@ -3319,10 +3310,11 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        panel_ventas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        panel_ventas.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        panel_ventas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        panel_ventas.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
         jTabbedPane4.setToolTipText("");
+        jTabbedPane4.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         jTabbedPane4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTabbedPane4MouseClicked(evt);
@@ -3330,6 +3322,7 @@ public class principal extends javax.swing.JFrame {
         });
 
         panel_mesas.setToolTipText("");
+        panel_mesas.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         panel_mesas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 panel_mesasMouseClicked(evt);
@@ -3342,12 +3335,17 @@ public class principal extends javax.swing.JFrame {
         jsc_item1.setAutoscrolls(true);
 
         panel_dinamico_mesas.setBackground(new java.awt.Color(102, 153, 255));
-        panel_dinamico_mesas.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 0, 51))); // NOI18N
+        panel_dinamico_mesas.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 0, 51))); // NOI18N
         panel_dinamico_mesas.setForeground(new java.awt.Color(140, 205, 250));
         panel_dinamico_mesas.setAutoscrolls(true);
-        panel_dinamico_mesas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        panel_dinamico_mesas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         panel_dinamico_mesas.setEnabled(false);
         panel_dinamico_mesas.setOpaque(false);
+        panel_dinamico_mesas.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                panel_dinamico_mesasKeyPressed(evt);
+            }
+        });
         panel_dinamico_mesas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jsc_item1.setViewportView(panel_dinamico_mesas);
 
@@ -3356,6 +3354,7 @@ public class principal extends javax.swing.JFrame {
         jTabbedPane4.addTab(" Mesas ", new javax.swing.ImageIcon(getClass().getResource("/imagenes/Food-Waiter-icon.png")), panel_mesas, ""); // NOI18N
         panel_mesas.getAccessibleContext().setAccessibleName("");
 
+        panel_escoger_orden.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         panel_escoger_orden.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 panel_escoger_ordenMouseClicked(evt);
@@ -3376,7 +3375,7 @@ public class principal extends javax.swing.JFrame {
         jsc_item.setAutoscrolls(true);
 
         pnl_button.setBackground(new java.awt.Color(102, 153, 255));
-        pnl_button.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 0, 51))); // NOI18N
+        pnl_button.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 0, 51))); // NOI18N
         pnl_button.setForeground(new java.awt.Color(140, 205, 250));
         pnl_button.setAutoscrolls(true);
         pnl_button.setEnabled(false);
@@ -3396,7 +3395,7 @@ public class principal extends javax.swing.JFrame {
         });
         panel_escoger_orden.add(Jbtn_cerrar_venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, 41, -1));
 
-        tabla_venta.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 10)); // NOI18N
+        tabla_venta.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         tabla_venta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -3573,6 +3572,7 @@ public class principal extends javax.swing.JFrame {
         jTabbedPane4.addTab(" Orden ", new javax.swing.ImageIcon(getClass().getResource("/imagenes/sales-report-icon.png")), panel_escoger_orden); // NOI18N
 
         panel_consultar_ventas.setToolTipText("Consultar ventas");
+        panel_consultar_ventas.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         panel_consultar_ventas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panel_consultar_ventas.add(txt_fecha_inicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(1006, 36, 140, -1));
         panel_consultar_ventas.add(txt_fecha_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(1007, 94, 140, -1));
@@ -3649,7 +3649,7 @@ public class principal extends javax.swing.JFrame {
         });
         panel_consultar_ventas.add(Jbtn_recuperar_ticket, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 180, 44, 40));
 
-        tabla_consultar_venta.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 10)); // NOI18N
+        tabla_consultar_venta.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         tabla_consultar_venta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -3709,14 +3709,21 @@ public class principal extends javax.swing.JFrame {
             panel_ventasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_ventasLayout.createSequentialGroup()
                 .addComponent(jTabbedPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 11, Short.MAX_VALUE))
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("VENTAS", new javax.swing.ImageIcon(getClass().getResource("/imagenes/dollar_48Pxs.png")), panel_ventas); // NOI18N
 
-        panel_caja.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        panel_caja.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        panel_caja.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
-        tabla_consultar_caja.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 10)); // NOI18N
+        jTabbedPane5.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+
+        panel_registrar_mov_caja.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+
+        jScrollPane13.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+
+        tabla_consultar_caja.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         tabla_consultar_caja.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -3735,7 +3742,9 @@ public class principal extends javax.swing.JFrame {
         });
         jScrollPane13.setViewportView(tabla_consultar_caja);
 
-        tabla_ingresos_caja.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 10)); // NOI18N
+        jScrollPane14.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+
+        tabla_ingresos_caja.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         tabla_ingresos_caja.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -3754,7 +3763,9 @@ public class principal extends javax.swing.JFrame {
         });
         jScrollPane14.setViewportView(tabla_ingresos_caja);
 
-        tabla_egresos_caja.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 10)); // NOI18N
+        jScrollPane15.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+
+        tabla_egresos_caja.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         tabla_egresos_caja.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -3773,12 +3784,13 @@ public class principal extends javax.swing.JFrame {
         });
         jScrollPane15.setViewportView(tabla_egresos_caja);
 
-        jLabel50.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel50.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel50.setText("INGRESOS:");
 
-        jLabel51.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel51.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel51.setText("EGRESOS:");
 
+        Jbtn_aperturar_caja.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         Jbtn_aperturar_caja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/folder-open-icon_1.png"))); // NOI18N
         Jbtn_aperturar_caja.setText(" Abrir Caja ");
         Jbtn_aperturar_caja.setToolTipText("Aperturar caja");
@@ -3801,6 +3813,7 @@ public class principal extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(check_ingreso);
+        check_ingreso.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         check_ingreso.setText("Ingreso");
         check_ingreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3809,11 +3822,13 @@ public class principal extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(check_egreso);
+        check_egreso.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         check_egreso.setText("Egreso");
 
-        jLabel52.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel52.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel52.setText("Monto:");
 
+        Jbtn_registrar_caja.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         Jbtn_registrar_caja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Save-icon.png"))); // NOI18N
         Jbtn_registrar_caja.setToolTipText("Registrar monto");
         Jbtn_registrar_caja.addActionListener(new java.awt.event.ActionListener() {
@@ -3822,6 +3837,7 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
+        Jbtn_cerrar_caja.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         Jbtn_cerrar_caja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cross-icon.png"))); // NOI18N
         Jbtn_cerrar_caja.setText(" Cerrar Caja ");
         Jbtn_cerrar_caja.setToolTipText("Cerrar caja");
@@ -3839,7 +3855,7 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel53.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel53.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel53.setText("Nota:");
 
         txt_total_ventas.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("¤#,##0.00"))));
@@ -3855,19 +3871,20 @@ public class principal extends javax.swing.JFrame {
         txt_total_egresos.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txt_total_egresos.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        jLabel54.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel54.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel54.setText("Ventas:");
 
-        jLabel55.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel55.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel55.setText("Ingresos:");
 
-        jLabel56.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel56.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel56.setText("Egresos:");
 
         txt_total_caja.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("¤#,##0.00"))));
         txt_total_caja.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txt_total_caja.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
+        Jbtn_eliminar_monto.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         Jbtn_eliminar_monto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/remove-from-database-icon.png"))); // NOI18N
         Jbtn_eliminar_monto.setToolTipText("Eliminar monto");
         Jbtn_eliminar_monto.addActionListener(new java.awt.event.ActionListener() {
@@ -3876,10 +3893,10 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel57.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel57.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel57.setText("Total en caja:");
 
-        lbl_total_ventas.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        lbl_total_ventas.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
         javax.swing.GroupLayout panel_registrar_mov_cajaLayout = new javax.swing.GroupLayout(panel_registrar_mov_caja);
         panel_registrar_mov_caja.setLayout(panel_registrar_mov_cajaLayout);
@@ -4009,7 +4026,11 @@ public class principal extends javax.swing.JFrame {
 
         jTabbedPane5.addTab(" Resumen Caja ", new javax.swing.ImageIcon(getClass().getResource("/imagenes/Folder-New-icon_32.png")), panel_registrar_mov_caja); // NOI18N
 
-        tabla_consultar_caja1.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 10)); // NOI18N
+        panel_consultar_caja.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+
+        jScrollPane16.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+
+        tabla_consultar_caja1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         tabla_consultar_caja1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -4028,6 +4049,7 @@ public class principal extends javax.swing.JFrame {
         });
         jScrollPane16.setViewportView(tabla_consultar_caja1);
 
+        Jbtn_reporte_caja.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         Jbtn_reporte_caja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/excel 24x.png"))); // NOI18N
         Jbtn_reporte_caja.setToolTipText("Gerar reporte de caja");
         Jbtn_reporte_caja.addActionListener(new java.awt.event.ActionListener() {
@@ -4036,10 +4058,17 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
+        jLabel110.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel110.setText("Fecha Inicial:");
 
+        txt_fecha_inicial_caja.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+
+        jLabel111.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel111.setText("Fecha Final:");
 
+        txt_fecha_final_caja.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+
+        jbtn_insumos_vendidos1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jbtn_insumos_vendidos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/search-icon.png"))); // NOI18N
         jbtn_insumos_vendidos1.setToolTipText("Busqueda por fecha en caja");
         jbtn_insumos_vendidos1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -4069,7 +4098,7 @@ public class principal extends javax.swing.JFrame {
                             .addGroup(panel_consultar_cajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel111)
                                 .addComponent(txt_fecha_final_caja, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addContainerGap(249, Short.MAX_VALUE))
         );
         panel_consultar_cajaLayout.setVerticalGroup(
             panel_consultar_cajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4089,7 +4118,7 @@ public class principal extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jbtn_insumos_vendidos1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE))
+                    .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -4108,9 +4137,11 @@ public class principal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("CAJA ", new javax.swing.ImageIcon(getClass().getResource("/imagenes/Cash-register-icon_1.png")), panel_caja); // NOI18N
 
-        panel_insumos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        panel_insumos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        panel_insumos.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
         jTabbedPane2.setToolTipText("Administra tus platillos e insumos");
+        jTabbedPane2.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         jTabbedPane2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTabbedPane2MouseClicked(evt);
@@ -4242,7 +4273,7 @@ public class principal extends javax.swing.JFrame {
                         .addComponent(Jbtn_editar_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addComponent(Jbtn_nuevo_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -4555,13 +4586,13 @@ public class principal extends javax.swing.JFrame {
                 .addComponent(panel_detalle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel_detalle_categorias, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         subPanel_agregarInsumosLayout.setVerticalGroup(
             subPanel_agregarInsumosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, subPanel_agregarInsumosLayout.createSequentialGroup()
                 .addGroup(subPanel_agregarInsumosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(panel_detalle_categorias, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
+                    .addComponent(panel_detalle_categorias, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 339, Short.MAX_VALUE)
                     .addComponent(panel_detalle, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panel_categorias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -4812,7 +4843,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(subPanel_editarInsumosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panel_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panel_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE))
+                    .addComponent(panel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -4824,7 +4855,7 @@ public class principal extends javax.swing.JFrame {
             panel_insumosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_insumosLayout.createSequentialGroup()
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panel_insumosLayout.setVerticalGroup(
             panel_insumosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4834,7 +4865,10 @@ public class principal extends javax.swing.JFrame {
         jTabbedPane1.addTab("INSUMOS ", new javax.swing.ImageIcon(getClass().getResource("/imagenes/carne_48Pxs.png")), panel_insumos); // NOI18N
 
         panel_compras.setToolTipText("Compras");
-        panel_compras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        panel_compras.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        panel_compras.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+
+        jTabbedPane6.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
         SubPanel_agregar_compra.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -5092,7 +5126,7 @@ public class principal extends javax.swing.JFrame {
         subPanel_consultar_comprasLayout.setVerticalGroup(
             subPanel_consultar_comprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, subPanel_consultar_comprasLayout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel47)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(subPanel_consultar_comprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5118,8 +5152,10 @@ public class principal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("COMPRAS ", new javax.swing.ImageIcon(getClass().getResource("/imagenes/shop-cart-icon.png")), panel_compras); // NOI18N
 
-        panel_utilerias.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        panel_utilerias.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        panel_utilerias.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        panel_utilerias.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+
+        jTbSystInfo.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
         panel_usuarios.setToolTipText("Administra los empleados");
         panel_usuarios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -6480,7 +6516,7 @@ public class principal extends javax.swing.JFrame {
                         .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, 1130, Short.MAX_VALUE)
                         .addComponent(jLabel92, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, 936, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6493,7 +6529,7 @@ public class principal extends javax.swing.JFrame {
                 .addComponent(jLabel112)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(183, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         jTbSystInfo.addTab("Informacion sistema", jPanel1);
@@ -6504,16 +6540,19 @@ public class principal extends javax.swing.JFrame {
             panel_utileriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_utileriasLayout.createSequentialGroup()
                 .addComponent(jTbSystInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 1164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 15, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panel_utileriasLayout.setVerticalGroup(
             panel_utileriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTbSystInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 398, Short.MAX_VALUE)
+            .addComponent(jTbSystInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 403, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("UTILERIAS ", new javax.swing.ImageIcon(getClass().getResource("/imagenes/settings_48Pxs.png")), panel_utilerias); // NOI18N
 
-        panel_cfdi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        panel_cfdi.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        panel_cfdi.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+
+        jTabbedPane7.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
         sub_panel_consultar_cfdi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -6632,28 +6671,29 @@ public class principal extends javax.swing.JFrame {
         );
         panel_cfdiLayout.setVerticalGroup(
             panel_cfdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
+            .addComponent(jTabbedPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("CFDI ", new javax.swing.ImageIcon(getClass().getResource("/imagenes/checks-icon.png")), panel_cfdi); // NOI18N
 
         getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 1180, 460));
 
-        jLabel28.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
+        jLabel28.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel28.setText("Logueo:");
         getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 660, 50, 30));
 
-        lbl_nombre_logueo.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 10)); // NOI18N
+        lbl_nombre_logueo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(lbl_nombre_logueo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 662, 188, 30));
 
-        jLabel30.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
+        jLabel30.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel30.setText("Cargo:");
         getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 660, -1, 22));
 
-        lbl_cargo_logueo.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 10)); // NOI18N
+        lbl_cargo_logueo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(lbl_cargo_logueo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 662, 110, 20));
 
         panel_teclado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_teclado.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
         javax.swing.GroupLayout panel_tecladoLayout = new javax.swing.GroupLayout(panel_teclado);
         panel_teclado.setLayout(panel_tecladoLayout);
@@ -6667,16 +6707,18 @@ public class principal extends javax.swing.JFrame {
         );
 
         getContentPane().add(panel_teclado, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 474, 680, 190));
+
+        jLabel39.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         getContentPane().add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 530, -1, -1));
 
-        jLabel102.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
+        jLabel102.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel102.setText("Atiende mesa actual:");
         getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 660, -1, 22));
 
-        lbl_nombre_atiende.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 10)); // NOI18N
+        lbl_nombre_atiende.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         getContentPane().add(lbl_nombre_atiende, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 662, 180, 20));
 
-        jLabel103.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
+        jLabel103.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel103.setText("Cargo:");
         getContentPane().add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 660, -1, 22));
 
@@ -6688,9 +6730,8 @@ public class principal extends javax.swing.JFrame {
         txt_total_pagar.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("¤#,##0.00"))));
         txt_total_pagar.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txt_total_pagar.setText("00.00");
-        txt_total_pagar.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txt_total_pagar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txt_total_pagar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        txt_total_pagar.setOpaque(false);
         txt_total_pagar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_total_pagarActionPerformed(evt);
@@ -6711,9 +6752,8 @@ public class principal extends javax.swing.JFrame {
         txt_total.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txt_total.setText("00.00");
         txt_total.setToolTipText("Total a pagar");
-        txt_total.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txt_total.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txt_total.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        txt_total.setOpaque(false);
         txt_total.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_totalActionPerformed(evt);
@@ -6776,6 +6816,7 @@ public class principal extends javax.swing.JFrame {
         });
         panel_totales.add(txt_descuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 130, 30));
 
+        jLabel41.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jLabel41.setText("Propina %");
         panel_totales.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, 30));
 
@@ -6802,9 +6843,8 @@ public class principal extends javax.swing.JFrame {
         txt_total_propina.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txt_total_propina.setText("00.00");
         txt_total_propina.setToolTipText("Calculo de la propina");
-        txt_total_propina.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txt_total_propina.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txt_total_propina.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        txt_total_propina.setOpaque(false);
         txt_total_propina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_total_propinaActionPerformed(evt);
@@ -6815,9 +6855,8 @@ public class principal extends javax.swing.JFrame {
         txt_dinero_recibido.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
         txt_dinero_recibido.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txt_dinero_recibido.setToolTipText("Indica el dinero recibido");
-        txt_dinero_recibido.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txt_dinero_recibido.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txt_dinero_recibido.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        txt_dinero_recibido.setOpaque(false);
         txt_dinero_recibido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_dinero_recibidoActionPerformed(evt);
@@ -6837,9 +6876,8 @@ public class principal extends javax.swing.JFrame {
         txt_cambio.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txt_cambio.setText("00.00");
         txt_cambio.setToolTipText("Total a pagar");
-        txt_cambio.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txt_cambio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txt_cambio.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
-        txt_cambio.setOpaque(false);
         txt_cambio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_cambioActionPerformed(evt);
@@ -10265,6 +10303,10 @@ public class principal extends javax.swing.JFrame {
             }
      
     }//GEN-LAST:event_JbtnCancelarVentaHistorialActionPerformed
+
+    private void panel_dinamico_mesasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_panel_dinamico_mesasKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_dinamico_mesasKeyPressed
 
     /**
      * @param args the command line arguments

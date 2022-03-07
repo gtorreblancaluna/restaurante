@@ -68,7 +68,7 @@
               <Color id="Default Cursor"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="1"/>
+              <Font name="Arial" size="10" style="0"/>
             </Property>
           </Properties>
           <Constraints>
@@ -92,7 +92,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jTabbedPane4" min="-2" pref="394" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -101,6 +101,9 @@
             <Container class="javax.swing.JTabbedPane" name="jTabbedPane4">
               <Properties>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="10" style="0"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTabbedPane4MouseClicked"/>
@@ -111,6 +114,9 @@
                 <Container class="javax.swing.JPanel" name="panel_mesas">
                   <Properties>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="11" style="0"/>
+                    </Property>
                   </Properties>
                   <AccessibilityProperties>
                     <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
@@ -172,6 +178,9 @@
                             <Property name="enabled" type="boolean" value="false"/>
                             <Property name="opaque" type="boolean" value="false"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="panel_dinamico_mesasKeyPressed"/>
+                          </Events>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
                             <Property name="useNullLayout" type="boolean" value="false"/>
@@ -182,6 +191,11 @@
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="panel_escoger_orden">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="11" style="0"/>
+                    </Property>
+                  </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="panel_escoger_ordenMouseClicked"/>
                   </Events>
@@ -289,7 +303,7 @@
                         <Component class="javax.swing.JTable" name="tabla_venta">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Microsoft Sans Serif" size="10" style="0"/>
+                              <Font name="Arial" size="11" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="4" rowCount="4">
@@ -632,6 +646,9 @@
                 <Container class="javax.swing.JPanel" name="panel_consultar_ventas">
                   <Properties>
                     <Property name="toolTipText" type="java.lang.String" value="Consultar ventas"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="11" style="0"/>
+                    </Property>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -854,7 +871,7 @@
                             <Component class="javax.swing.JTable" name="tabla_consultar_venta">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Microsoft Sans Serif" size="10" style="0"/>
+                                  <Font name="Arial" size="11" style="0"/>
                                 </Property>
                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                   <Table columnCount="4" rowCount="4">
@@ -904,6 +921,9 @@
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="10" style="0"/>
+            </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -930,10 +950,20 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JTabbedPane" name="jTabbedPane5">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="10" style="0"/>
+                </Property>
+              </Properties>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
               <SubComponents>
                 <Container class="javax.swing.JPanel" name="panel_registrar_mov_caja">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="11" style="0"/>
+                    </Property>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                       <JTabbedPaneConstraints tabName=" Resumen Caja ">
@@ -1109,6 +1139,11 @@
                   </Layout>
                   <SubComponents>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane13">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
+                      </Properties>
                       <AuxValues>
                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                       </AuxValues>
@@ -1118,7 +1153,7 @@
                         <Component class="javax.swing.JTable" name="tabla_consultar_caja">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Microsoft Sans Serif" size="10" style="0"/>
+                              <Font name="Arial" size="11" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="4" rowCount="4">
@@ -1166,6 +1201,11 @@
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane14">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
+                      </Properties>
                       <AuxValues>
                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                       </AuxValues>
@@ -1175,7 +1215,7 @@
                         <Component class="javax.swing.JTable" name="tabla_ingresos_caja">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Microsoft Sans Serif" size="10" style="0"/>
+                              <Font name="Arial" size="11" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="4" rowCount="4">
@@ -1196,6 +1236,11 @@
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane15">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
+                      </Properties>
                       <AuxValues>
                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                       </AuxValues>
@@ -1205,7 +1250,7 @@
                         <Component class="javax.swing.JTable" name="tabla_egresos_caja">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Microsoft Sans Serif" size="10" style="0"/>
+                              <Font name="Arial" size="11" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="4" rowCount="4">
@@ -1255,7 +1300,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel50">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="1"/>
+                          <Font name="Arial" size="11" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="INGRESOS:"/>
                       </Properties>
@@ -1263,13 +1308,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel51">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="1"/>
+                          <Font name="Arial" size="11" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="EGRESOS:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Jbtn_aperturar_caja">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/folder-open-icon_1.png"/>
                         </Property>
@@ -1300,6 +1348,9 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="buttonGroup1"/>
                         </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Ingreso"/>
                       </Properties>
                       <Events>
@@ -1311,19 +1362,25 @@
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                           <ComponentRef name="buttonGroup1"/>
                         </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Egreso"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel52">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Arial" size="11" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Monto:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Jbtn_registrar_caja">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/Save-icon.png"/>
                         </Property>
@@ -1335,6 +1392,9 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="Jbtn_cerrar_caja">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/cross-icon.png"/>
                         </Property>
@@ -1359,7 +1419,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel53">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Arial" size="11" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Nota:"/>
                       </Properties>
@@ -1401,7 +1461,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel54">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Arial" size="11" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Ventas:"/>
                       </Properties>
@@ -1409,7 +1469,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel55">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Arial" size="11" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Ingresos:"/>
                       </Properties>
@@ -1417,7 +1477,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel56">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Arial" size="11" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Egresos:"/>
                       </Properties>
@@ -1435,6 +1495,9 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="Jbtn_eliminar_monto">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/remove-from-database-icon.png"/>
                         </Property>
@@ -1447,7 +1510,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel57">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="1"/>
+                          <Font name="Arial" size="11" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Total en caja:"/>
                       </Properties>
@@ -1455,13 +1518,18 @@
                     <Component class="javax.swing.JLabel" name="lbl_total_ventas">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="1"/>
+                          <Font name="Arial" size="11" style="0"/>
                         </Property>
                       </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="panel_consultar_caja">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="11" style="0"/>
+                    </Property>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                       <JTabbedPaneConstraints tabName=" Historial de Caja ">
@@ -1495,7 +1563,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="251" max="32767" attributes="0"/>
+                              <EmptySpace pref="249" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1518,7 +1586,7 @@
                                       <Component id="jbtn_insumos_vendidos1" min="-2" pref="33" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jScrollPane16" pref="330" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane16" pref="326" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -1527,6 +1595,11 @@
                   </Layout>
                   <SubComponents>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane16">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
+                      </Properties>
                       <AuxValues>
                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                       </AuxValues>
@@ -1536,7 +1609,7 @@
                         <Component class="javax.swing.JTable" name="tabla_consultar_caja1">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Microsoft Sans Serif" size="10" style="0"/>
+                              <Font name="Arial" size="11" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="4" rowCount="4">
@@ -1559,6 +1632,9 @@
                     </Container>
                     <Component class="javax.swing.JButton" name="Jbtn_reporte_caja">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/excel 24x.png"/>
                         </Property>
@@ -1570,26 +1646,45 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel110">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Fecha Inicial:"/>
                       </Properties>
                     </Component>
                     <Component class="com.toedter.calendar.JDateChooser" name="txt_fecha_inicial_caja">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
+                      </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel111">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Fecha Final:"/>
                       </Properties>
                     </Component>
                     <Component class="com.toedter.calendar.JDateChooser" name="txt_fecha_final_caja">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
+                      </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JButton" name="jbtn_insumos_vendidos1">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="11" style="0"/>
+                        </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/search-icon.png"/>
                         </Property>
@@ -1611,6 +1706,9 @@
           <Properties>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="10" style="0"/>
             </Property>
           </Properties>
           <Constraints>
@@ -1643,6 +1741,9 @@
             <Container class="javax.swing.JTabbedPane" name="jTabbedPane2">
               <Properties>
                 <Property name="toolTipText" type="java.lang.String" value="Administra tus platillos e insumos"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="10" style="0"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTabbedPane2MouseClicked"/>
@@ -1683,7 +1784,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="panel_detalle_categorias" alignment="0" pref="341" max="32767" attributes="0"/>
+                                  <Component id="panel_detalle_categorias" alignment="0" pref="339" max="32767" attributes="0"/>
                                   <Component id="panel_detalle" alignment="0" max="32767" attributes="0"/>
                                   <Component id="panel_categorias" max="32767" attributes="0"/>
                               </Group>
@@ -1758,7 +1859,7 @@
                                       </Group>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane3" pref="224" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane3" pref="221" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -2458,7 +2559,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="panel_1" max="32767" attributes="0"/>
                                   <Component id="panel_2" max="32767" attributes="0"/>
-                                  <Component id="panel3" alignment="1" pref="330" max="32767" attributes="0"/>
+                                  <Component id="panel3" alignment="1" pref="326" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -2881,6 +2982,9 @@
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="10" style="0"/>
+            </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -2910,6 +3014,11 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JTabbedPane" name="jTabbedPane6">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="10" style="0"/>
+                </Property>
+              </Properties>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
               <SubComponents>
@@ -3427,7 +3536,7 @@
               <Color id="Default Cursor"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="1"/>
+              <Font name="Arial" size="10" style="0"/>
             </Property>
           </Properties>
           <Constraints>
@@ -3452,12 +3561,17 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jTbSystInfo" alignment="0" pref="398" max="32767" attributes="0"/>
+                  <Component id="jTbSystInfo" alignment="0" pref="403" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JTabbedPane" name="jTbSystInfo">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="10" style="0"/>
+                </Property>
+              </Properties>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
               <SubComponents>
@@ -6042,7 +6156,7 @@
                               <Component id="jLabel112" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jLabel113" min="-2" pref="74" max="-2" attributes="0"/>
-                              <EmptySpace pref="183" max="32767" attributes="0"/>
+                              <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -6079,6 +6193,9 @@
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="10" style="0"/>
+            </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -6099,12 +6216,17 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jTabbedPane7" alignment="0" pref="410" max="32767" attributes="0"/>
+                  <Component id="jTabbedPane7" alignment="0" pref="398" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JTabbedPane" name="jTabbedPane7">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="10" style="0"/>
+                </Property>
+              </Properties>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
               <SubComponents>
@@ -6367,7 +6489,7 @@
     <Component class="javax.swing.JLabel" name="jLabel28">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="12" style="3"/>
+          <Font name="Arial" size="12" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Logueo:"/>
       </Properties>
@@ -6380,7 +6502,7 @@
     <Component class="javax.swing.JLabel" name="lbl_nombre_logueo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Microsoft Sans Serif" size="10" style="0"/>
+          <Font name="Arial" size="12" style="0"/>
         </Property>
       </Properties>
       <Constraints>
@@ -6392,7 +6514,7 @@
     <Component class="javax.swing.JLabel" name="jLabel30">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="12" style="3"/>
+          <Font name="Arial" size="12" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cargo:"/>
       </Properties>
@@ -6405,7 +6527,7 @@
     <Component class="javax.swing.JLabel" name="lbl_cargo_logueo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Microsoft Sans Serif" size="10" style="0"/>
+          <Font name="Arial" size="12" style="0"/>
         </Property>
       </Properties>
       <Constraints>
@@ -6420,6 +6542,9 @@
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
           </Border>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="11" style="0"/>
         </Property>
       </Properties>
       <Constraints>
@@ -6442,6 +6567,11 @@
       </Layout>
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel39">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="11" style="0"/>
+        </Property>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="930" y="530" width="-1" height="-1"/>
@@ -6451,7 +6581,7 @@
     <Component class="javax.swing.JLabel" name="jLabel102">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="12" style="3"/>
+          <Font name="Arial" size="11" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Atiende mesa actual:"/>
       </Properties>
@@ -6464,7 +6594,7 @@
     <Component class="javax.swing.JLabel" name="lbl_nombre_atiende">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Microsoft Sans Serif" size="10" style="0"/>
+          <Font name="Arial" size="11" style="0"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -6479,7 +6609,7 @@
     <Component class="javax.swing.JLabel" name="jLabel103">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="12" style="3"/>
+          <Font name="Arial" size="11" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cargo:"/>
       </Properties>
@@ -6674,6 +6804,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel41">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="11" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Propina %"/>
           </Properties>
           <Constraints>

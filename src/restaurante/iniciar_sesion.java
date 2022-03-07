@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package restaurante;
 
 import clases.conectate;
@@ -21,10 +16,6 @@ import ve.edu.ucab.keyboard.Keyboard;
 import ve.edu.ucab.logic.LogicComponent;
 import ve.edu.ucab.logic.LogicListComponent;
 
-/**
- *
- * @author KONESH
- */
 public class iniciar_sesion extends javax.swing.JFrame {
 
     private Keyboard keyboard;
@@ -37,9 +28,6 @@ public class iniciar_sesion extends javax.swing.JFrame {
     public static String id_usuario_global; // variable publica global para asignar el id del usuario
     public static String nombre_usuario_global, apellidos_usuario_global, puesto_global, administrador_global, ventas_global, caja_global, insumos_global, compras_global, utilerias_global;
 
-    /**
-     * Creates new form iniciar_sesion
-     */
     public iniciar_sesion() {
         initComponents();
 
@@ -121,7 +109,6 @@ public class iniciar_sesion extends javax.swing.JFrame {
         txt_contraseña = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         panel_teclado = new javax.swing.JPanel();
-        jLabel92 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -159,11 +146,6 @@ public class iniciar_sesion extends javax.swing.JFrame {
             .addGap(0, 221, Short.MAX_VALUE)
         );
 
-        jLabel92.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cuichi_mini.png"))); // NOI18N
-        jLabel92.setToolTipText("");
-        jLabel92.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -179,23 +161,19 @@ public class iniciar_sesion extends javax.swing.JFrame {
                                 .addComponent(txt_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(Jbtn_iniciar_sesion)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(404, 404, 404)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(jLabel2)
+                .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(jLabel2)
-                        .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Jbtn_iniciar_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(txt_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Jbtn_iniciar_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
                 .addComponent(panel_teclado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -264,7 +242,6 @@ public class iniciar_sesion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Jbtn_iniciar_sesion;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel92;
     private javax.swing.JPanel panel_teclado;
     private javax.swing.JPasswordField txt_contraseña;
     // End of variables declaration//GEN-END:variables
